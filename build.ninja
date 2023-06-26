@@ -1,0 +1,11 @@
+version = 0.0.1
+
+rule build-arm64
+  command = cargo lambda build --arm64 --release
+  description = Building radmin $version
+
+build build: build-arm64
+
+default build-arm64
+
+
